@@ -4,8 +4,8 @@ function checkPalindrome(str) {
     const revString = revArrValues.join('')
 
     if (stringVal == revString){
-        console.log(stringVal+" "+"is a Palindrome")
-    }else console.log (stringVal+" "+"is not a Palindrome" )
+        document.getElementById("p1").innerHTML = stringVal+" "+"is a Palindrome"
+    }else document.getElementById("p1").innerHTML = stringVal+" "+"is not a Palindrome" 
 }
-const stringVal = prompt("Enter a string")
+const stringVal = document.getElementById("stringVal").value
     checkPalindrome(stringVal)
