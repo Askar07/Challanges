@@ -1,7 +1,6 @@
 var res = ''
 var a = 1
 do {
-    res +="\n" + a
-    a++
+    res +="\n" + aa++
 } while (a<=10);
 console.log(res)
