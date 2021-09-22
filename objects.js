@@ -10,13 +10,21 @@ const person = {
         m5=80
     ]
 }
+var result = person.marks.forEach(check)
 function check(result) {
     if (result > 35 ){
-        console.log("Passed")
-    }else console.log("failed")
+        return pass() 
+        stop;
+    }else return fail()
 }
 
-function totalMarksAndPercentage() {
-    var totalMarks = person.marks.reduce((a,b) => a+b,0)
-    var percentage = ''
+//function totalMarksAndPercentage() {
+  //  var totalMarks = person.marks.reduce((a,b) => a+b,0)
+    //var percentage = ''
+//}
+function pass(){
+    console.log("Passed")
+}
+function fail(){
+    console.log("Failed")
 }
