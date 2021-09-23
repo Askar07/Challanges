@@ -5,7 +5,7 @@ const person = {
     marks:[
         m1 = 95,
         m2 = 85,
-        m3 = 100,
+        m3 = 20,
         m4 = 50,
         m5 = 90
     ]
@@ -14,25 +14,25 @@ var result = person.marks.every(check)
 function check(value) {
         return value > 35        
 } if (result == true){
-    display()
- }else fail()
-
-var total = person.marks.reduce(getReport)
-function getReport(sum,val) {
-    return sum + val
-} var percent = (total/500)*100
-function display(){
     pass()
-    console.log("ID:",person.id,"\n","Name:",person.personName,"\n","Age:"+ person.age,"\n","Marks:"+person.marks) 
-
+ }else fail()
+function getReport(){
+var total = person.marks.reduce(totalMarks)
+var percent = (total/500)*100 
+console.log("Total Marks:",total+"/500","\n","Percentage:",percent+"%")
+function totalMarks(sum,val) {
+    return sum + val
+}return percent 
 }
 function pass() {
     console.log("Passed")
+    console.log("ID:",person.id,"\n","Name:",person.personName,"\n","Age:"+ person.age,"\n","Marks:"+person.marks) 
+    getReport()
 }
 function fail(){
     console.log("Failed") 
     console.log("ID:",person.id,"\n","Name:",person.personName,"\n","Age:"+ person.age,"\n","Marks:"+person.marks)
-     
+    getReport()
+    
 }
-console.log("Total Marks:",total)
-console.log("Percentage:",percent)
+
