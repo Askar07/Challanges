@@ -3,9 +3,8 @@ const person = {
     personName:"Askar",
     age:20,
     marks:[
-        m1 = 95,
-        m2 = 85,
-        m3 = 20,
+        95, 85,
+        m3 = 50,
         m4 = 50,
         m5 = 90
     ]
