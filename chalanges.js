@@ -221,3 +221,32 @@ function oddOREven(num){
 		 return"evenish"
 	}else { return "oddish"}
 }console.log(oddOREven(4433))
+
+// using class 
+
+class Circle {      //class created 
+	constructor(radius){ // constructor of a class with a parameter
+	this.radius = radius  
+	}
+getArea(){   //function been created to process the area and perimeter 
+	console.log(3.14*(this.radius**2))  // here we can use Math.PI for pi value =22/7 which is 3.14
+}
+gerPerimeter(){
+	console.log(2*3.14*this.radius)   // here we can use Math.PI for pi value =22/7 which is 3.14
+}
+}
+var circleArea = new Circle(4)
+circleArea.getArea()
+circleArea.gerPerimeter()
+
+// concatenate function
+function concatArray(arr1,arr2) {
+	var val = arr1.concat(arr2)// concat function is used to combine multiple values in single element
+	return val
+}console.log(concatArray([10,15,20],[6,5,4]))
+
+function concatString(str1,str2){
+	var val = str1.concat(str2)
+	return val
+}console.log(concatString("Hello","world"))
+
