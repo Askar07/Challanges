@@ -261,4 +261,31 @@ function secondLargestNum(arr) {
 	return secondMax
 }console.log(secondLargestNum([100,115,218,16,11,20]))
 
-// 
+// factors of odd or even
+function factorGroup(num){
+	var arr =[]
+	for (let i = 1; i <= num; i++){
+		if (num%i==0)
+		{
+			arr.push(i)	
+		}
+	}len = arr.length
+	return len%2 == 0? 'even':'odd'
+}console.log(factorGroup(36))
+
+// calculate number of days between dates
+function numOfDays(date1,date2){
+	let d1 = date1.getTime()
+	let d2 = date2.getTime()
+	const oneDay = 24*3600*1000 
+	let diff = (d2-d1)/oneDay
+	return diff
+}console.log(numOfDays(new Date("June 20, 2019"),new Date("June 30, 2019")))
+
+// length of array and nested array 
+function len(arr) {
+	let flat = arr.flat(4)
+	const len = flat.length
+	return len
+}console.log(len([6,2,3,[0,5],8]))
+
