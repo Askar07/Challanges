@@ -167,7 +167,7 @@ function toSort(arr){
 		a = arr.flat(4)
 	    b = a.sort()
 	    return b
-}console.log(toSort([[4], [1], [3]]))
+}console.log(toSort([[4], [1,8], [3]]))
 
 // Square Every Digit
 function squareEveryDigit(val){
@@ -250,3 +250,15 @@ function concatString(str1,str2){
 	return val
 }console.log(concatString("Hello","world"))
 
+// SecondLargestNumbers in a array
+function secondLargestNum(arr) {
+	var maxVal = Math.max.apply(0,arr) //get the max value in array 
+	largeNum = arr.indexOf(maxVal)  // store the index value of largest number
+	arr[largeNum] = -Infinity    //replace the the value stored in the index to -infinity now the largest value will be replaces
+	var secondMax = Math.max.apply(0,arr) // agian get the max value from the array now the second largest value will be taken 
+	var newArr = arr
+	console.log(newArr)
+	return secondMax
+}console.log(secondLargestNum([100,115,218,16,11,20]))
+
+// 
