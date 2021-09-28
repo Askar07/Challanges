@@ -204,7 +204,7 @@ function upperCaseToFront(str){
 	var caps = str.match(regex)
 	var final=[]
 	final.push(caps)
-	var reg = /[a-z]/g
+	const reg = /[a-z]/g
 	var small = str.match(reg)
 	final.push(small)
 	var capsToSmall = final.flat(2).join("")
@@ -284,8 +284,28 @@ function numOfDays(date1,date2){
 
 // length of array and nested array 
 function len(arr) {
-	let flat = arr.flat(4)
+	let flat = arr.flat(3)
 	const len = flat.length
 	return len
-}console.log(len([6,2,3,[0,5],8]))
+}console.log(len([6,2,3,[0,5],[8]]))
+
+// 	Lcm of two positive numbers
+function lcm(n1,n2){
+	var min = (n1>n2)? n1:n2
+	while(true){
+		if (min % n1 == 0 && min % n2 == 0){
+			return min
+		}
+		min++
+	}
+}console.log(lcm(6,8))
+
+// // RegExp: Validate Pin
+// function validatePin(pin){
+// 	const regex = /[0-9]/g
+// 	var res = pin.match(regex)
+// 	var len = res.length
+// 	var output = (len<6 &&)? true:false
+// 	return output
+// }console.log(validatePin("425"))
 
