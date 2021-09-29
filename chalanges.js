@@ -349,3 +349,21 @@ function perimeter(l,val){
 	return res
 }console.log(perimeter("s",4))
 
+// basic Claculator
+function calculator(num1,ope,num2)
+{  
+	switch(ope){
+		case "+": console.log(num1+num2)
+		break
+		case "-": console.log(num1-num2)
+		break
+		case "*": console.log(num1*num2)
+		break
+		case "/": console.log(num1/num2)
+		break
+		default: console.log("Enter the operators within the braackets {+ - * /}")
+		break;
+	} 
+}console.log(calculator(5,"-",1))
+
+
