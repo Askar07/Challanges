@@ -301,11 +301,15 @@ function lcm(n1,n2){
 }console.log(lcm(6,8))
 
 // // RegExp: Validate Pin
-// function validatePin(pin){
-// 	const regex = /[0-9]/g
-// 	var res = pin.match(regex)
-// 	var len = res.length
-// 	var output = (len<6 &&)? true:false
-// 	return output
-// }console.log(validatePin("425"))
+function validatePIN (pin) {
+	if(pin.length === 4 ||  pin.length === 6) {
+	  if( /^(\d{4}|\d{6})$/.test(pin))  {
+		return true;
+	  }else {return false;}
+	}else {
+		return false;
+		}
+}console.log(validatePIN("4644"))
+
+
 
