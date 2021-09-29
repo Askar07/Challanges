@@ -311,5 +311,41 @@ function validatePIN (pin) {
 		}
 }console.log(validatePIN("4644"))
 
+// Function Factory
+var add5 = baseNum(5)
+var add10 = baseNum(10)
+function baseNum(x) {
+	return function(y) {
+	  return x + y
+	}
+  }  
+  console.log(add5(2)) 
+  console.log(add10(10))
+  console.log(add10(add5(2)))
 
+//   Array of Multiples
+function arrayOfMultiples(num,len) {
+	let i = num
+	const res = []
+while(i<=len*num){
+	i+=num
+	res.push(i)
+}return res
+}console.log(arrayOfMultiples(4,5))
+
+// Area of a country
+function areaOfcountry(str,num) {
+	const totalArea = 148940000
+	let area = (num/totalArea)*100
+	let fix = area.toFixed(2)
+	console.log(str," is ",fix,"% of the total world's landmass")
+}console.log(areaOfcountry("Russia",17098242))
+
+// Perimeters with a Catch
+function perimeter(l,val){
+	let square = 4 * val
+	let circle = 2*3.14*val
+	let res = (l=="s")? square:circle
+	return res
+}console.log(perimeter("s",4))
 
